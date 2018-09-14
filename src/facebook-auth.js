@@ -33,7 +33,7 @@ class FacebookAuth extends React.Component {
     reAuthenticate: false,
     reRequest: false,
     fields: 'name,email,picture',
-    version: '2.8',
+    version: '3.1',
     language: 'en_US',
     autoLoad: false,
     disableRedirect: false,
@@ -41,19 +41,20 @@ class FacebookAuth extends React.Component {
   };
 
   componentDidMount() {
+    console.log(document.getElementById('facebook-jssdk'))
     if (document.getElementById('facebook-jssdk')) {
       return;
     }
 
-    this.setfbAsyncInit();
-    this.loadSdkAsynchronously();
+    // this.setfbAsyncInit();
+    // this.loadSdkAsynchronously();
 
-    let rootElem = document.getElementById('fb-root');
-    if (!rootElem) {
-      rootElem = document.createElement('div');
-      rootElem.id = 'fb-root';
-      document.body.appendChild(rootElem);
-    }
+    // let rootElem = document.getElementById('fb-root');
+    // if (!rootElem) {
+    //   rootElem = document.createElement('div');
+    //   rootElem.id = 'fb-root';
+    //   document.body.appendChild(rootElem);
+    // }
   }
 
   setfbAsyncInit() {
