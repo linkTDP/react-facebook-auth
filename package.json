@@ -1,6 +1,6 @@
 {
   "name": "react-facebook-auth",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A Component React for Facebook authentication",
   "author": "Ionut Milica <ionut.milica@gmail.com>",
   "license": "MIT",
@@ -26,6 +26,7 @@
   "module": "./es/index.js",
   "jsnext:main": "./es/index.js",
   "scripts": {
+    "install": "npm run build:lib && npm run build:es && npm run build:umd && npm run build:umd:min",
     "build": "npm run build:lib && npm run build:es && npm run build:umd && npm run build:umd:min",
     "build:lib": "babel src --out-dir lib --ignore __tests__",
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es --ignore __tests__",
